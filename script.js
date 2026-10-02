@@ -59,7 +59,7 @@ this.options.submitButtonPosition = 'hidden';
       "type": "lab.html.Page",
       "items": [
         {
-          "required": false,
+          "required": true,
           "type": "input",
           "label": "年齢を半角数字で入力してください (例：18歳→18)",
           "name": "Age",
@@ -144,7 +144,7 @@ var itemNO;
 for(let i = 0; i < items.length; i++){
   itemNO = i + 1;
   this.options.items.push({
-     "required": false,
+     "required": true,
      "type": "radio",
      "options":[
 {
@@ -242,7 +242,7 @@ this.options.submitButtonPosition = 'hidden';
 this.options.items.push({
   "type": "text",
   "title": "",
-  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝そう思わない<br> 2＝どちらかといえば、そう思わない<br> 3＝どちらともいえない<br>  4＝どちらかといえば、そう思う<br> 5＝そう思う<br><br>"
+  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝全くそう思わない<br> 2＝そう思わない<br> 3＝あまりそう思わない<br>  4＝どちらかといえば、そう思わない<br> 5＝どちらともいえない<br> 6＝どちらかといえば、そう思う<br> 7＝少しそう思う<br> 8＝そう思う<br> 9＝強くそう思う<br><br>"
 })
 //Multiple choice
 const items = [
@@ -287,28 +287,44 @@ var itemNO;
 for(let i = 0; i < items.length; i++){
   itemNO = i + 1;
   this.options.items.push({
-     "required": false,
+     "required": true,
      "type": "radio",
      "options":[
 {
-      "label": "1. そう思わない",
+      "label": "1. 全くそう思わない",
       "coding": "1"
     },
     { 
-      "label": "2. どちらかといえば、そう思わない",
+      "label": "2. そう思わない",
       "coding": "2"
     },
     { 
-      "label": "3. どちらともいえない",
+      "label": "3. あまりそう思わない",
       "coding": "3"
     },
     { 
-      "label": "4. どちらかといえば、そう思う",
+      "label": "4. どちらかといえば、そう思わない",
       "coding": "4"
     },
     { 
-      "label": "5. そう思う",
+      "label": "5. どちらともいえない",
       "coding": "5"
+    },
+    { 
+      "label": "6. どちらかといえば、そう思う",
+      "coding": "6"
+    },
+    { 
+      "label": "7. 少しそう思う",
+      "coding": "7"
+    },
+    { 
+      "label": "8. そう思う",
+      "coding": "8"
+    },
+     { 
+      "label": "9. とてもそう思う",
+      "coding": "9"
     }
   ],
   "label":itemNO +"."+items[i],
@@ -361,7 +377,7 @@ this.options.submitButtonPosition = 'hidden';
 this.options.items.push({
   "type": "text",
   "title": "",
-  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝全くそう思わない<br> 2＝どちらかといえば、そう思わない<br> 3＝少しそう思わない<br> 4＝どちらともいえない<br> 5=少しそう思う<br> 6=どちらかといえば、そう思う<br> 7=強くそう思う<br><br>"
+  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝全くそう思わない<br> 2＝あまりそう思わない<br> 3＝どちらかといえば、そう思わない<br> 4＝どちらともいえない<br> 5=どちらかといえば、そう思う<br> 6=少しそう思う<br> 7=強くそう思う<br><br>"
 })
 //Multiple choice
 const items = [
@@ -380,7 +396,7 @@ var itemNO;
 for(let i = 0; i < items.length; i++){
   itemNO = i + 1;
   this.options.items.push({
-     "required": false,
+     "required": true,
      "type": "radio",
      "options":[
 {
@@ -388,11 +404,11 @@ for(let i = 0; i < items.length; i++){
       "coding": "1"
     },
     { 
-      "label": "2. どちらかといえば、そう思わない",
+      "label": "2. あまりそう思わない",
       "coding": "2"
     },
     { 
-      "label": "3. 少しそう思わない",
+      "label": "3. どちらかといえば、そう思わない",
       "coding": "3"
     },
     { 
@@ -400,11 +416,11 @@ for(let i = 0; i < items.length; i++){
       "coding": "4"
     },
     { 
-      "label": "5. 少しそう思う",
+      "label": "5. どちらかといえば、そう思う",
       "coding": "5"
     },
     { 
-      "label": "6. どちらかといえば、そう思う",
+      "label": "6. 少しそう思う",
       "coding": "6"
     },
     { 
@@ -463,7 +479,7 @@ this.options.submitButtonPosition = 'hidden';
 this.options.items.push({
   "type": "text",
   "title": "",
-  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝全くそう思わない<br> 2＝そう思わない<br> 3＝どちらかといえば、そう思わない<br> 4＝どちらかといえば、そう思う<br> 5=そう思う<br> 6=強くそう思う<br><br>"
+  "content": "以下の項目の内容について、最も当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。<br><br>  1＝強く賛成しない<br> 2＝賛成しない<br> 3＝どちらかといえば、賛成しない<br> 4＝どちらかといえば、賛成する<br> 5=賛成する<br> 6=強く賛成する<br><br>"
 })
 //Multiple choice
 const items = [
@@ -509,31 +525,31 @@ itemsArray = this.random.shuffle(itemsArray)
 for (let i = 0; i < items.length; i++){
 itemNO = i+1;
   this.options.items.push({
-     "required": false,
+     "required": true,
      "type": "radio",
      "options":[
 {
-      "label": "1. 全くそう思わない",
+      "label": "1. 強く賛成しない",
       "coding": "1"
     },
     { 
-      "label": "2. そう思わない",
+      "label": "2. 賛成しない",
       "coding": "2"
     },
     { 
-      "label": "3. どちらかといえば、そう思わない",
+      "label": "3. どちらかといえば、賛成しない",
       "coding": "3"
     },
     { 
-      "label": "4. どちらかといえば、そう思う",
+      "label": "4. どちらかといえば、賛成する",
       "coding": "4"
     },
     { 
-      "label": "5. そう思う",
+      "label": "5. 賛成する",
       "coding": "5"
     },
     { 
-      "label": "6. 強くそう思う",
+      "label": "6. 強く賛成する",
       "coding": "6"
     }
   ],
@@ -656,7 +672,7 @@ var itemNO;
 for(let i = 0; i < items.length; i++){
   itemNO = i + 1;
   this.options.items.push({
-     "required": false,
+     "required": true,
      "type": "radio",
      "options":[
     {
